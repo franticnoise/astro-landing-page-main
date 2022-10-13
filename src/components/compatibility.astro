@@ -1,0 +1,92 @@
+---
+import ContentSection from "~/components/content-section.astro";
+import CompatibilityList from "~/components/compatibility-list.astro";
+// preact svelte vue solid lit 
+// react angular node nextjs wordpress php 
+// cloudflare rewnder 
+// heroku aws
+const frameworks = [
+  {
+    title: "React",
+    icon: "frameworks/react",
+    localicon: '../assetss/aws-svgrepo-com.svg',
+    url: "https://reactjs.org/",
+  },
+  {
+    title: "Angular",
+    icon: "frameworks/angular",
+    url: "https://preactjs.com/",
+  },
+  {
+    title: "Node",
+    icon: "frameworks/nodejs",
+    url: "https://svelte.dev/",
+  },
+  {
+    title: "NextJS",
+    icon: "frameworks/nextjs",
+    url: "https://vuejs.org/",
+  },
+  {
+    title: "Wordpress",
+    icon: "frameworks/wordpress",
+    url: "https://www.solidjs.com/",
+  },
+  {
+    title: "PHP",
+    icon: "frameworks/php2",
+    url: "https://lit.dev/",
+  },
+];
+
+const platforms = [
+  {
+    title: "Netlify",
+    icon: "platforms/netlify",
+    url: "https://www.netlify.com/",
+  },
+  {
+    title: "Vercel",
+    icon: "platforms/vercel",
+    url: "https://vercel.com/",
+  },
+  {
+    title: "Heroku",
+    icon: "platforms/heroku",
+    url: "https://pages.cloudflare.com/",
+  },
+  {
+    title: "AWS",
+    icon: "platforms/aws",
+    url: "https://render.com/",
+  },
+  {
+    title: "GitHub",
+    icon: "fa-brands:github",
+    url: "https://pages.github.com/",
+  },
+  {
+    title: "GitLab",
+    icon: "fa-brands:gitlab",
+    url: "https://docs.gitlab.com/ee/user/project/pages/",
+  },
+];
+---
+
+<ContentSection title="Frameworks" id="frameworks">
+  <Fragment slot="lead">
+    We engineer  <span class="text-primary">next level</span> web design and user interfaces {" "}
+    <span class="text-primary">tailor made</span>
+    for our <span class="text-primary">clients </span>needs.
+  </Fragment>
+  <CompatibilityList
+    title="Frameworks"
+    data={frameworks}
+    url="https://docs.astro.build/core-concepts/framework-components/"
+  />
+  <CompatibilityList
+    title="Platforms"
+    data={platforms}
+    url="https://docs.astro.build/guides/deploy/"
+  />
+</ContentSection>
